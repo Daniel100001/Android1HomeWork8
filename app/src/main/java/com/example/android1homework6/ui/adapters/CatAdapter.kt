@@ -3,6 +3,7 @@ package com.example.android1homework6.ui.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -15,18 +16,23 @@ class CatAdapter(private val onItemClick: OnItemClick,
     private var listModel: MutableList<CatModel>) : RecyclerView.Adapter<CatAdapter.CatViewHolder>() {
 
 
+
    inner class CatViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         private var image:ImageView? = null
+       private var text:EditText? = null
         private var name: TextView? = null
-        private var detail: TextView? = null
+        private var clichka: TextView? = null
         init {
             image = view.findViewById(R.id.item_image_cat)
             name = view.findViewById(R.id.item_cat_text_status_code)
+            clichka = view.findViewById(R.id.CLichka)
+            text = view.findViewById(R.id.btn_back)
         }
         fun onBind(catModel: CatModel) {
             image?.let {
                 Glide.with(it).load(catModel.image).into(image!!)}
             name?.text = catModel.name
+            clichka?.text = catModel.clichka
             itemView.setOnClickListener(View.OnClickListener {
                 onItemClick.onShortClick(catModel)
             })

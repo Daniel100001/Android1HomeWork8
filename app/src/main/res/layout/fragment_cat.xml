@@ -9,7 +9,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_catFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="670dp"
         tools:listitem="@layout/item_cat"/>
+    <Button
+        android:id="@+id/back"
+        android:layout_width="150dp"
+        android:text="Back"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|center"
+         />
+
 
 </FrameLayout>

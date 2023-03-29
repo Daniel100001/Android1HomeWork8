@@ -24,4 +24,12 @@
         app:layout_constraintStart_toStartOf="@+id/Image_Detail"
         app:layout_constraintTop_toBottomOf="@+id/Image_Detail" />
 
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="150dp"
+        android:text="Back"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="@+id/Text_Detail"
+        app:layout_constraintStart_toStartOf="@+id/Text_Detail"
+        app:layout_constraintTop_toBottomOf="@+id/Text_Detail" />
 </androidx.constraintlayout.widget.ConstraintLayout>
